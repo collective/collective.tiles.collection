@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="collective.tiles.collection">
+  <body>
+    <div tal:attributes="class string:tileWrapper collectionTile ${view/data/css_class};
+                         data-tileid tile_id"
+         tal:define="tile_id view/id;
+                     results view/results;
+                     collection nocall:view/collection;
+                     plone_view context/@@plone;
+                     toLocalizedTime nocall:plone_view/toLocalizedTime;
+                     viewActions python:context.portal_registry.get('plone.types_use_view_action_in_listings', []);"
+         tal:condition="results">
+       <tal:newhere define="template_id view/data/renderer|string:base_tile_collection_renderer;
+                            callable_path string:context/$template_id/macros/collection-tile-macro;">
+         <tal:subview metal:use-macro="python:path(callable_path)">
+     		Subview
+         </tal:subview>
+     	</tal:newhere>
+    </div>
+  </body>
+</html>

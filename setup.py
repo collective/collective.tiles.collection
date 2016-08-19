@@ -39,6 +39,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'plone.api',
+        'plone.app.tiles',
+        'plone.formwidget.contenttree',
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',

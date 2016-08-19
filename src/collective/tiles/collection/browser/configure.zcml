@@ -17,4 +17,12 @@
       directory="static"
       />
 
+  <browser:page
+    name="base_tile_collection_renderer"
+    permission="zope2.View"
+    for="*"
+    class=".base_view.BaseView"
+    layer="..interfaces.ICollectiveTilesCollectionLayer"
+    template="templates/base_view.pt"
+    />
 </configure>

@@ -19,97 +19,96 @@ msgstr ""
 
 #: ../browser/base_view.py:11
 msgid "Base renderer"
-msgstr ""
+msgstr "Visualizzazione standard"
 
 #: ../interfaces.py:81
 msgid "Exclude the Current Context"
-msgstr ""
+msgstr "Escludi il contesto corrente"
 
 #: ../interfaces.py:68
 msgid "If enabled, a more... link will appear in the footer of the tile, linking to the underlying Collection."
-msgstr ""
+msgstr "Se abilitato, un link altro... apparirà nel footer della tile, puntando alla collezione di riferimento."
 
 #: ../interfaces.py:61
 msgid "If enabled, items will be selected randomly from the collection, rather than based on its sort order."
-msgstr ""
+msgstr "Se abilitato, i risultati verranno mostrati in ordine casuale."
 
 #: ../interfaces.py:82
 msgid "If enabled, the listing will not include the current item the tile is rendered for if it otherwise would be."
-msgstr ""
+msgstr "Se abilitato, il contenuto corrente verrà rimosso dalla lista dei possibili risultati."
 
 #: ../interfaces.py:60
 msgid "Select random items"
-msgstr ""
+msgstr "Seleziona elementi a caso"
 
 #: ../interfaces.py:75
-msgid "Show more... label"
-msgstr ""
+msgid "Custom more... label"
+msgstr "Etichetta personalizzata per il link ad altro"
 
 #: ../interfaces.py:67
 msgid "Show more... link"
-msgstr ""
+msgstr "Mostra il link ad altro"
 
 #: ../interfaces.py:76
 msgid "This value override default \"More...\" label."
-msgstr ""
+msgstr "Il valore inserito andrà a sovrascrivere l'etichetta \"Altro...\""
 
 #. Default: "Collection"
 #: ../interfaces.py:34
 msgid "collection_tile_collectionuid"
-msgstr ""
+msgstr "Collezione"
 
 #. Default: "Select a collection."
 #: ../interfaces.py:37
 msgid "collection_tile_collectionuid_help"
-msgstr ""
+msgstr "Seleziona una collezione."
 
 #. Default: "CSS class"
 #: ../interfaces.py:101
 msgid "collection_tile_css_class"
-msgstr ""
+msgstr "Classe CSS"
 
 #. Default: "Insert a list of additional css classes for this tile."
 #: ../interfaces.py:104
 msgid "collection_tile_css_class_help"
-msgstr ""
+msgstr "Inserisci una lista di classi CSS aggiuntive per questa tile."
 
 #. Default: "Number of results"
 #: ../interfaces.py:45
 msgid "collection_tile_limit"
-msgstr ""
+msgstr "Numero di risultati"
 
 #. Default: "Renderer"
 #: ../interfaces.py:89
 msgid "collection_tile_renderer"
-msgstr ""
+msgstr "Visualizzazione"
 
 #. Default: "Select one of the available possible layouts for this tile."
 #: ../interfaces.py:92
 msgid "collection_tile_renderer_help"
-msgstr ""
+msgstr "Seleziona una tra le possibili visualizzazioni disponibili per questa tile."
 
 #. Default: "Show dates"
 #: ../interfaces.py:52
 msgid "collection_tile_showdates"
-msgstr ""
+msgstr "Mostra le date"
 
 #. Default: "Tile title"
 #: ../interfaces.py:25
 msgid "collection_tile_title"
-msgstr ""
+msgstr "Titolo della tile"
 
 #. Default: "The title of the tile. Leave blank to not show it."
 #: ../interfaces.py:27
 msgid "collection_tile_title_help"
-msgstr ""
+msgstr "Il titolo della tile. Lascia vuoto per non mostrarlo."
 
 #. Default: "More…"
 #: ../browser/templates/base_view.pt:53
 msgid "more_url"
-msgstr ""
+msgstr "Altro…"
 
 #. Default: "No results found"
 #: ../browser/templates/base_view.pt:14
 msgid "tiles_collection_noresults"
-msgstr ""
-
+msgstr "Nessun risultato trovato"

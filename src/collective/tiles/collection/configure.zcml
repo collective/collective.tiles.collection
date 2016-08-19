@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.tiles.collection">
 
   <i18n:registerTranslations directory="locales" />
@@ -9,7 +10,7 @@
   <includeDependencies package="." />
 
   <include package=".browser" />
-
+  <include package="plone.app.tiles"/>
 
   <genericsetup:registerProfile
       name="default"
@@ -33,4 +34,20 @@
       factory=".setuphandlers.HiddenProfiles"
       name="collective.tiles.collection-hiddenprofiles" />
 
+  <plone:tile
+      name="collective.tiles.collection"
+      title="Collection tile"
+      description="A tile that shows collection results"
+      schema=".interfaces.ICollectionTileData"
+      class=".collection.CollectionTile"
+      template="browser/templates/collection_tile.pt"
+      add_permission="plone.app.tiles.AddTile"
+      permission="zope2.View"
+      for="*"
+      />
+
+  <utility
+      name="collective.tiles.collection.vocabulary.renderers"
+      component=".vocabularies.CollectionRenderersVocabularyFactory"
+  />
 </configure>
