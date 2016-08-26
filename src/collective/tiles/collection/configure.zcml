@@ -22,6 +22,14 @@
       />
 
   <genericsetup:registerProfile
+      name="mosaic_support"
+      title="collective.tiles.collection"
+      directory="profiles/mosaic_support"
+      description="Add this tile to mosaic list."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
       name="uninstall"
       title="collective.tiles.collection (uninstall)"
       directory="profiles/uninstall"

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<registry>
+  <records prefix="plone.app.mosaic.app_tiles.collective_tiles_collection"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">collective.tiles.collection</value>
+    <value key="label">Collection</value>
+    <value key="category">applications</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
+  </records>
+
+  <!-- <record name="plone.app.mosaic.app_tiles.plone_app_standardtiles_embed.available_actions">
+    <field type="plone.registry.field.List">
+      <title>Available actions for the Embed tile</title>
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+    </value>
+  </record> -->
+
+</registry>
