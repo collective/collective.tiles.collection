@@ -7,3 +7,5 @@ Changelog
 
 - Initial release.
   [cekk]
+  
+- Fix indentation on README.rst
