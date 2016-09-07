@@ -19,9 +19,7 @@ Installation
 Install collective.tiles.collection by adding it to your buildout::
 
     [buildout]
-    
     ...
-    
     eggs =
     collective.tiles.collection
 
