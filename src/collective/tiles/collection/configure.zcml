@@ -49,7 +49,7 @@
       schema=".interfaces.ICollectionTileData"
       class=".collection.CollectionTile"
       template="browser/templates/collection_tile.pt"
-      add_permission="plone.app.tiles.AddTile"
+      add_permission="cmf.ModifyPortalContent"
       permission="zope2.View"
       for="*"
       />
