@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a1 (unreleased)
-------------------
+1.0 (2016-12-02)
+----------------
 
 - Initial release.
   [cekk]
