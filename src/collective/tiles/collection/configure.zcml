@@ -14,7 +14,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="collective.tiles.collection"
+      title="Collective tiles: collection"
       directory="profiles/default"
       description="Installs the collective.tiles.collection add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -23,7 +23,7 @@
 
   <genericsetup:registerProfile
       name="mosaic_support"
-      title="collective.tiles.collection"
+      title="Collective tiles: collection mosaic support"
       directory="profiles/mosaic_support"
       description="Add this tile to mosaic list."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -31,7 +31,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="collective.tiles.collection (uninstall)"
+      title="Collective tiles: collection (uninstall)"
       directory="profiles/uninstall"
       description="Uninstalls the collective.tiles.collection add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -51,6 +51,7 @@
       template="browser/templates/collection_tile.pt"
       add_permission="cmf.ModifyPortalContent"
       permission="zope2.View"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
       for="*"
       />
 

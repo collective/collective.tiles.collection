@@ -1,14 +1,20 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
-from plone.autoform import directives as form
-from plone.formwidget.contenttree import ContentTreeFieldWidget
-from plone.formwidget.contenttree import UUIDSourceBinder
 from plone.supermodel import model
 from collective.tiles.collection import _
 from zope import schema
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.interface import Interface
-from plone.app.vocabularies.catalog import CatalogSource
+from plone.app.vocabularies.catalog import CatalogSource as CatalogSourceBase
+
+
+class CatalogSource(CatalogSourceBase):
+    """
+    Collection tile specific catalog source to allow targeted widget.
+    Without this hack, validation doesn't pass
+    """
+    def __contains__(self, value):
+        return True  # Always contains to allow lazy handling of removed objs
 
 
 class ICollectionTileRenderer(Interface):
