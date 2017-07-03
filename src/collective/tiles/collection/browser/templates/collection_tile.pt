@@ -5,7 +5,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="collective.tiles.collection">
   <body>
-    <div tal:attributes="class string:tileWrapper collectionTile ${view/data/css_class};
+    <div tal:attributes="class string:collectionTile ${view/data/css_class};
                          data-tileid tile_id"
          tal:define="tile_id view/id;
                      results view/results;
