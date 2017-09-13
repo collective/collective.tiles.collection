@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a2 (unreleased)
+1.0a2 (2017-09-13)
 ------------------
 
 - Removed unused css class
