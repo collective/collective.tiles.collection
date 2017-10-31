@@ -1,20 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Module where all interfaces, events and exceptions live."""
-from plone.supermodel import model
 from collective.tiles.collection import _
+from plone.supermodel import model
 from zope import schema
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.interface import Interface
-from plone.app.vocabularies.catalog import CatalogSource as CatalogSourceBase
-
-
-class CatalogSource(CatalogSourceBase):
-    """
-    Collection tile specific catalog source to allow targeted widget.
-    Without this hack, validation doesn't pass
-    """
-    def __contains__(self, value):
-        return True  # Always contains to allow lazy handling of removed objs
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from plone.formwidget.contenttree import UUIDSourceBinder
+from plone.formwidget.contenttree import ContentTreeFieldWidget
+from plone.autoform import directives
 
 
 class ICollectionTileRenderer(Interface):
@@ -43,9 +35,10 @@ class ICollectionTileData(model.Schema):
         description=_(
             'collection_tile_collectionuid_help',
             u'Select a collection.'),
-        source=CatalogSource(portal_type=('Topic', 'Collection')),
+        source=UUIDSourceBinder(portal_type=('Topic', 'Collection')),
         required=True
     )
+    directives.widget(collection_uid=ContentTreeFieldWidget)
 
     limit = schema.Int(
         title=_(

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1.1p4 (unreleased)
+--------------------
+
+- Plone 4 compatibility branch.
+  [cekk]
+
 1.1 (11/10/2017)
 ----------------
 
@@ -25,5 +31,5 @@ Changelog
 
 - Initial release.
   [cekk]
-  
+
 - Fix indentation on README.rst
