@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1.1 (unreleased)
+------------------
+Added Custom "more..." collection
+  [fdelia]
+
 1.1 (11/10/2017)
 ----------------
 
@@ -25,5 +30,5 @@ Changelog
 
 - Initial release.
   [cekk]
-  
+
 - Fix indentation on README.rst
