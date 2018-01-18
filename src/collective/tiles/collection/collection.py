@@ -18,6 +18,14 @@ class CollectionTile(tiles.PersistentTile):
             return None
         return api.content.get(UID=collection_uid)
 
+    @property
+    @view.memoize
+    def show_more_collection(self):
+        show_more_collection_uid = self.data.get('show_more_collection_uid')
+        if not show_more_collection_uid:
+            return None
+        return api.content.get(UID=show_more_collection_uid)
+
     def results(self):
         if self.data.get('random', False):
             return self._random_results()
