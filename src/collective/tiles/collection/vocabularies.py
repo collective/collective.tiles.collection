@@ -5,15 +5,14 @@ from plone.api.exc import InvalidParameterError
 from plone.app.customerize import registration
 from zope.globalrequest import getRequest
 from zope.i18n import translate
-from zope.interface import implements
+from zope.interface import implementer
 from zope.publisher.interfaces.browser import IBrowserRequest
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 
 
+@implementer(IVocabularyFactory)
 class CollectionRenderersVocabulary(object):
-
-    implements(IVocabularyFactory)
 
     def __call__(self, context):
         views = registration.getViews(IBrowserRequest)
@@ -56,5 +55,6 @@ class CollectionRenderersVocabulary(object):
             name,
             translate(human_name, context=request)
         )
+
 
 CollectionRenderersVocabularyFactory = CollectionRenderersVocabulary()

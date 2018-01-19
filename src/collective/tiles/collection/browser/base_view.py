@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from Products.Five.browser import BrowserView
-from collective.tiles.collection.interfaces import ICollectionTileRenderer
-from zope.interface import implements
 from collective.tiles.collection import _
+from collective.tiles.collection.interfaces import ICollectionTileRenderer
+from Products.Five.browser import BrowserView
+from zope.interface import implementer
 
 
+@implementer(ICollectionTileRenderer)
 class BaseView(BrowserView):
-    implements(ICollectionTileRenderer)
 
-    display_name = _("Base renderer")
+    display_name = _('Base renderer')

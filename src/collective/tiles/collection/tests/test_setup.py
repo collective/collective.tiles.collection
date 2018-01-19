@@ -26,7 +26,8 @@ class TestSetup(unittest.TestCase):
         from collective.tiles.collection.interfaces import (
             ICollectiveTilesCollectionLayer)
         from plone.browserlayer import utils
-        self.assertIn(ICollectiveTilesCollectionLayer, utils.registered_layers())
+        self.assertIn(
+            ICollectiveTilesCollectionLayer, utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
@@ -45,6 +46,6 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ICollectiveTilesCollectionLayer is removed."""
-        from collective.tiles.collection.interfaces import ICollectiveTilesCollectionLayer
+        from collective.tiles.collection.interfaces import ICollectiveTilesCollectionLayer  # noqa
         from plone.browserlayer import utils
-        self.assertNotIn(ICollectiveTilesCollectionLayer, utils.registered_layers())
+        self.assertNotIn(ICollectiveTilesCollectionLayer, utils.registered_layers())   # noqa
