@@ -53,7 +53,7 @@ class CollectionRenderersVocabulary(object):
         return SimpleVocabulary.createTerm(
             name,
             name,
-            translate(human_name, context=request)
+            translate(human_name, context=request),
         )
 
 

@@ -44,7 +44,7 @@ class ICollectionTileData(model.Schema):
             'collection_tile_collectionuid_help',
             u'Select a collection.'),
         source=CatalogSource(portal_type=('Topic', 'Collection')),
-        required=True
+        required=True,
     )
 
     limit = schema.Int(
@@ -100,7 +100,7 @@ class ICollectionTileData(model.Schema):
             u'Select one of the available possible layouts for this tile.'),
         vocabulary='collective.tiles.collection.vocabulary.renderers',
         required=True,
-        default='base_tile_collection_renderer'
+        default='base_tile_collection_renderer',
     )
 
     css_class = schema.TextLine(

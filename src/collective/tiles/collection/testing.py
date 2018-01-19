@@ -29,13 +29,13 @@ COLLECTIVE_TILES_COLLECTION_FIXTURE = CollectiveTilesCollectionLayer()
 
 COLLECTIVE_TILES_COLLECTION_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_TILES_COLLECTION_FIXTURE,),
-    name='CollectiveTilesCollectionLayer:IntegrationTesting'
+    name='CollectiveTilesCollectionLayer:IntegrationTesting',
 )
 
 
 COLLECTIVE_TILES_COLLECTION_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_TILES_COLLECTION_FIXTURE,),
-    name='CollectiveTilesCollectionLayer:FunctionalTesting'
+    name='CollectiveTilesCollectionLayer:FunctionalTesting',
 )
 
 
@@ -43,7 +43,7 @@ COLLECTIVE_TILES_COLLECTION_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
         COLLECTIVE_TILES_COLLECTION_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        z2.ZSERVER_FIXTURE
+        z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveTilesCollectionLayer:AcceptanceTesting'
+    name='CollectiveTilesCollectionLayer:AcceptanceTesting',
 )
