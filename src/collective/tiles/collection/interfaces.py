@@ -89,20 +89,10 @@ class ICollectionTileData(model.Schema):
             u'Custom "more..." collection'),
         description=_(
             'collection_tile_showmorecollectionuid_help',
-            u'Select an object in the site, for the "more..." link. If empty, the link will be the collection.'),
+            u'Select an object in the site, for the "more..." link. '
+            u'If empty, the link will be the collection.'),
         source=CatalogSource(portal_type=('Topic', 'Collection')),
-        required=False
-    )
-
-    show_more_collection_uid = schema.Choice(
-        title=_(
-            'collection_tile_showmorecollectionuid',
-            u'Custom "more..." collection'),
-        description=_(
-            'collection_tile_showmorecollectionuid_help',
-            u'Select an object in the site, for the "more..." link. If empty, the link will be the collection.'),
-        source=CatalogSource(portal_type=('Topic', 'Collection')),
-        required=False
+        required=False,
     )
 
     exclude_context = schema.Bool(
