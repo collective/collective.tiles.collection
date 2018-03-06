@@ -104,6 +104,26 @@ Contribute
 - Issue Tracker: https://github.com/collective/collective.tiles.collection/issues
 - Source Code: https://github.com/collective/collective.tiles.collection
 
+Credits
+-------
+
+Developed with the support of:
+
+* `Regione Emilia-Romagna`__
+
+Regione Emilia-Romagna supports the `PloneGov initiative`__.
+
+__ http://www.regione.emilia-romagna.it/
+__ http://www.plonegov.it/
+
+Authors
+-------
+
+This product was developed by RedTurtle Technology team.
+
+.. image:: http://www.redturtle.it/redturtle_banner.png
+   :alt: RedTurtle Technology Site
+   :target: http://www.redturtle.it/
 
 License
 -------
