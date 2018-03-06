@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1.2 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 1.1.1 (2018-03-06)
 ------------------
 - Added Custom "more..." collection field
