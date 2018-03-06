@@ -10,6 +10,8 @@
          tal:define="tile_id view/id;
                      results view/results;
                      collection nocall:view/collection;
+                     show_more_collection nocall:view/show_more_collection;
+                     collection python:show_more_collection and show_more_collection or collection;
                      plone_view context/@@plone;
                      toLocalizedTime nocall:plone_view/toLocalizedTime;
                      viewActions python:context.portal_registry.get('plone.types_use_view_action_in_listings', []);"
