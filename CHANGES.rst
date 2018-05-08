@@ -7,6 +7,8 @@ Changelog
 - Fixed a bug that hid a tile collection with no elements to display. If a user
   can edit the tiles, now he can see the empty tile.
   [arsenico13]
+- Update some italian translations.
+  [arsenico13]
 
 
 1.1.1 (2018-03-06)
