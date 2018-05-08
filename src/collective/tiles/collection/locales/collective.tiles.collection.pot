@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-01-18 11:29+0000\n"
+"POT-Creation-Date: 2018-05-08 13:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Collective tiles: collection mosaic support"
 msgstr ""
 
-#: ../interfaces.py:98
+#: ../interfaces.py:99
 msgid "Exclude the Current Context"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "If enabled, items will be selected randomly from the collection, rather than based on its sort order."
 msgstr ""
 
-#: ../interfaces.py:99
+#: ../interfaces.py:100
 msgid "If enabled, the listing will not include the current item the tile is rendered for if it otherwise would be."
 msgstr ""
 
@@ -96,12 +96,12 @@ msgid "collection_tile_collectionuid_help"
 msgstr ""
 
 #. Default: "CSS class"
-#: ../interfaces.py:118
+#: ../interfaces.py:119
 msgid "collection_tile_css_class"
 msgstr ""
 
 #. Default: "Insert a list of additional css classes for this tile."
-#: ../interfaces.py:121
+#: ../interfaces.py:122
 msgid "collection_tile_css_class_help"
 msgstr ""
 
@@ -111,12 +111,12 @@ msgid "collection_tile_limit"
 msgstr ""
 
 #. Default: "Renderer"
-#: ../interfaces.py:106
+#: ../interfaces.py:107
 msgid "collection_tile_renderer"
 msgstr ""
 
 #. Default: "Select one of the available possible layouts for this tile."
-#: ../interfaces.py:109
+#: ../interfaces.py:110
 msgid "collection_tile_renderer_help"
 msgstr ""
 
@@ -153,4 +153,9 @@ msgstr ""
 #. Default: "No results found"
 #: ../browser/templates/base_view.pt:14
 msgid "tiles_collection_noresults"
+msgstr ""
+
+#. Default: "Tile not rendered cause there is no content to show."
+#: ../browser/templates/collection_tile.pt:33
+msgid "tiles_collection_nothing_to_show"
 msgstr ""
