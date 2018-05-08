@@ -27,6 +27,15 @@ class CollectionTile(tiles.PersistentTile):
             return None
         return api.content.get(UID=show_more_collection_uid)
 
+    def can_edit(self):
+        if api.user.is_anonymous():
+            return False
+        current = api.user.get_current()
+        return api.user.has_permission(
+            'Edit',
+            username=current.id,
+            obj=self.context)
+
     def results(self):
         if self.data.get('random', False):
             return self._random_results()

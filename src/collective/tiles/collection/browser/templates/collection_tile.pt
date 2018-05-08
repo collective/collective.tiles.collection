@@ -26,13 +26,15 @@
       <div tal:attributes="class string:collectionTile ${view/data/css_class};
                            data-tileid tile_id"
            tal:condition="not:results">
-         <h3 tal:define="title view/data/title|nothing;"
-             class="tileTitle"
-             tal:condition="title">${title}</h3>
-         <p class="noResults"
-            i18n:translate="tiles_collection_nothing_to_show">
-            Tile not rendered cause there is no content to show.
-         </p>
+         <tal:checkperm tal:condition="view/can_edit">
+           <h3 tal:define="title view/data/title|nothing;"
+               class="tileTitle"
+               tal:condition="title">${title}</h3>
+           <p class="noResults"
+              i18n:translate="tiles_collection_nothing_to_show">
+              Tile not rendered cause there is no content to show.
+           </p>
+         </tal:checkperm>
       </div>
     </tal:block>
   </body>
