@@ -5,23 +5,35 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="collective.tiles.collection">
   <body>
-    <div tal:attributes="class string:collectionTile ${view/data/css_class};
-                         data-tileid tile_id"
-         tal:define="tile_id view/id;
-                     results view/results;
-                     collection nocall:view/collection;
-                     show_more_collection nocall:view/show_more_collection;
-                     collection python:show_more_collection and show_more_collection or collection;
-                     plone_view context/@@plone;
-                     toLocalizedTime nocall:plone_view/toLocalizedTime;
-                     viewActions python:context.portal_registry.get('plone.types_use_view_action_in_listings', []);"
-         tal:condition="results">
-       <tal:newhere define="template_id view/data/renderer|string:base_tile_collection_renderer;
-                            callable_path string:context/$template_id/macros/collection-tile-macro;">
-         <tal:subview metal:use-macro="python:path(callable_path)">
-     		Subview
-         </tal:subview>
-     	</tal:newhere>
-    </div>
+    <tal:block tal:define="tile_id view/id;
+                results view/results;
+                collection nocall:view/collection;
+                show_more_collection nocall:view/show_more_collection;
+                collection python:show_more_collection and show_more_collection or collection;
+                plone_view context/@@plone;
+                toLocalizedTime nocall:plone_view/toLocalizedTime;
+                viewActions python:context.portal_registry.get('plone.types_use_view_action_in_listings', []);">
+      <div tal:attributes="class string:collectionTile ${view/data/css_class};
+                           data-tileid tile_id"
+           tal:condition="results">
+         <tal:newhere define="template_id view/data/renderer|string:base_tile_collection_renderer;
+                              callable_path string:context/$template_id/macros/collection-tile-macro;">
+           <tal:subview metal:use-macro="python:path(callable_path)">
+             Subview
+           </tal:subview>
+         </tal:newhere>
+      </div>
+      <div tal:attributes="class string:collectionTile ${view/data/css_class};
+                           data-tileid tile_id"
+           tal:condition="not:results">
+         <h3 tal:define="title view/data/title|nothing;"
+             class="tileTitle"
+             tal:condition="title">${title}</h3>
+         <p class="noResults"
+            i18n:translate="tiles_collection_nothing_to_show">
+            Tile not rendered cause there is no content to show.
+         </p>
+      </div>
+    </tal:block>
   </body>
 </html>
