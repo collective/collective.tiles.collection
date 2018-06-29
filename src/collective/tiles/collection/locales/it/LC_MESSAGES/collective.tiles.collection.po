@@ -138,4 +138,4 @@ msgstr "Il titolo della tile. Lascia vuoto per non mostrarlo."
 #. Default: "Tile not rendered cause there is no content to show."
 #: ../browser/templates/collection_tile.pt:33
 msgid "tiles_collection_nothing_to_show"
-msgstr "Tile non generata perché non c'è nessun contenuto da visualizzare."
+msgstr "Non ci sono elementi da visualizzare."
