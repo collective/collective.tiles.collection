@@ -91,7 +91,7 @@ class ICollectionTileData(model.Schema):
             'collection_tile_showmorecollectionuid_help',
             u'Select an object in the site, for the "more..." link. '
             u'If empty, the link will be the collection.'),
-        source=CatalogSource(portal_type=('Topic', 'Collection')),
+        source=CatalogSource(portal_type=('Topic', 'Collection', 'Folder', 'Document')),
         required=False,
     )
 

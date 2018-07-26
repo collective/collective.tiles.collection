@@ -17,7 +17,18 @@ class CollectionRenderersVocabulary(object):
     def __call__(self, context):
         views = registration.getViews(IBrowserRequest)
         renderers = filter(self.isCollectionRenderer, views)
-        return SimpleVocabulary(map(self.generateTerms, renderers))
+	tmp_lst = []
+	unique_list_values = []
+
+	lst = map(self.generateTerms, renderers)
+	for item in lst:
+	    if item.title not in tmp_lst:
+                tmp_lst.append(item.title)
+		unique_list_values.append(item)
+
+
+        return SimpleVocabulary(unique_list_values)
+        #return SimpleVocabulary(map(self.generateTerms, renderers))
 
     def isCollectionRenderer(self, view):
         """
