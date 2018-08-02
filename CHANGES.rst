@@ -3,7 +3,7 @@ Changelog
 
 1.1.2 (unreleased)
 ------------------
-
+- Enable other content types to be chosen as the More link [daniele]
 - Fixed a bug that hid a tile collection with no elements to display. If a user
   can edit the tiles, now he can see the empty tile.
   [arsenico13]
