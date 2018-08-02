@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1.3 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 1.1.2 (2018-08-02)
 ------------------
 - Enable other content types to be chosen as the More link [daniele]
