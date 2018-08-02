@@ -13,6 +13,7 @@ class CatalogSource(CatalogSourceBase):
     Collection tile specific catalog source to allow targeted widget.
     Without this hack, validation doesn't pass
     """
+
     def __contains__(self, value):
         return True  # Always contains to allow lazy handling of removed objs
 
@@ -91,7 +92,8 @@ class ICollectionTileData(model.Schema):
             'collection_tile_showmorecollectionuid_help',
             u'Select an object in the site, for the "more..." link. '
             u'If empty, the link will be the collection.'),
-        source=CatalogSource(portal_type=('Topic', 'Collection', 'Folder', 'Document')),
+        source=CatalogSource(portal_type=(
+            'Topic', 'Collection', 'Folder', 'Document')),
         required=False,
     )
 
