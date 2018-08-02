@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.2 (unreleased)
+1.1.2 (2018-08-02)
 ------------------
 - Enable other content types to be chosen as the More link [daniele]
 - Fixed a bug that hid a tile collection with no elements to display. If a user
