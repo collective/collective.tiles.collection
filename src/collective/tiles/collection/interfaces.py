@@ -6,6 +6,8 @@ from plone.supermodel import model
 from zope import schema
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from plone.autoform import directives
+from plone.app.z3cform.widget import RelatedItemsWidget
 
 
 class CatalogSource(CatalogSourceBase):
@@ -44,8 +46,13 @@ class ICollectionTileData(model.Schema):
         description=_(
             'collection_tile_collectionuid_help',
             u'Select a collection.'),
-        source=CatalogSource(portal_type=('Topic', 'Collection')),
+        source=CatalogSource(portal_type=('Collection', 'Folder')),
         required=True,
+    )
+    directives.widget(
+        'collection_uid',
+        RelatedItemsWidget,
+        pattern_options = {"selectableTypes": ["Collection"]}
     )
 
     limit = schema.Int(
