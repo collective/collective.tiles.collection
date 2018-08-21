@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.tiles.collection',
-    version='1.1.3',
+    version='1.1.4.dev0',
     description="A tile that shows a set of collection results with a customizable layout",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
