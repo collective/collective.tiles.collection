@@ -4,7 +4,7 @@ Changelog
 1.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix document outline [nzambello]
 
 
 1.1.2 (2018-08-02)
@@ -17,7 +17,6 @@ Changelog
   [arsenico13]
 - Fix templates for container styles in base view and in empty tile handling
   [nzambello]
-- Fix document outline [nzambello]
 
 
 1.1.1 (2018-03-06)
