@@ -11,6 +11,7 @@ Changelog
 ------------------
 
 - Fix document outline [nzambello]
+- Improved navigation experience when choosing the collection to use [daniele]  
 
 
 1.1.2 (2018-08-02)
