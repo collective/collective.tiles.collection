@@ -4,8 +4,8 @@ Changelog
 0.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fix templates
+  [nzambello]
 
 0.1.0 (2018-10-12)
 ------------------
