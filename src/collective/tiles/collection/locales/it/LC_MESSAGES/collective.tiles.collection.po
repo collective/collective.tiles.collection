@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-19 09:03+0000\n"
+"POT-Creation-Date: 2018-06-29 13:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,98 +17,125 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.tiles.collection\n"
 
+#: ../configure.zcml:56
+msgid "A tile that shows collection results"
+msgstr "Una tile che mostra i risultati di una collezione"
+
+#: ../configure.zcml:30
+msgid "Add this tile to mosaic list."
+msgstr ""
+
 #: ../browser/base_view.py:11
 msgid "Base renderer"
 msgstr "Visualizzazione standard"
 
-#: ../interfaces.py:81
+#: ../configure.zcml:56
+msgid "Collection tile"
+msgstr "Tile collezione"
+
+#: ../configure.zcml:22
+msgid "Collective tiles: collection"
+msgstr ""
+
+#: ../configure.zcml:39
+msgid "Collective tiles: collection (uninstall)"
+msgstr ""
+
+#: ../configure.zcml:30
+msgid "Collective tiles: collection mosaic support"
+msgstr ""
+
+#: ../interfaces.py:80
 msgid "Exclude the Current Context"
 msgstr "Escludi il contesto corrente"
 
-#: ../interfaces.py:68
+#: ../interfaces.py:67
 msgid "If enabled, a more... link will appear in the footer of the tile, linking to the underlying Collection."
 msgstr "Se abilitato, un link altro... apparirà nel footer della tile, puntando alla collezione di riferimento."
 
-#: ../interfaces.py:61
+#: ../interfaces.py:60
 msgid "If enabled, items will be selected randomly from the collection, rather than based on its sort order."
 msgstr "Se abilitato, i risultati verranno mostrati in ordine casuale."
 
-#: ../interfaces.py:82
+#: ../interfaces.py:81
 msgid "If enabled, the listing will not include the current item the tile is rendered for if it otherwise would be."
 msgstr "Se abilitato, il contenuto corrente verrà rimosso dalla lista dei possibili risultati."
 
-#: ../interfaces.py:60
+#: ../configure.zcml:22
+msgid "Installs the collective.tiles.collection add-on."
+msgstr "Installa il plugin collective.tiles.collection."
+
+#: ../interfaces.py:59
 msgid "Select random items"
 msgstr "Seleziona elementi a caso"
 
-#: ../interfaces.py:75
-msgid "Custom more... label"
-msgstr "Etichetta personalizzata per il link ad altro"
+#: ../interfaces.py:74
+msgid "Show more... label"
+msgstr ""
 
-#: ../interfaces.py:67
+#: ../interfaces.py:66
 msgid "Show more... link"
 msgstr "Mostra il link ad altro"
 
-#: ../interfaces.py:76
+#: ../interfaces.py:75
 msgid "This value override default \"More...\" label."
 msgstr "Il valore inserito andrà a sovrascrivere l'etichetta \"Altro...\""
 
+#: ../configure.zcml:39
+msgid "Uninstalls the collective.tiles.collection add-on."
+msgstr "Disinstalla il plugin collective.tiles.collection."
+
 #. Default: "Collection"
-#: ../interfaces.py:34
+#: ../interfaces.py:32
 msgid "collection_tile_collectionuid"
 msgstr "Collezione"
 
 #. Default: "Select a collection."
-#: ../interfaces.py:37
+#: ../interfaces.py:35
 msgid "collection_tile_collectionuid_help"
 msgstr "Seleziona una collezione."
 
 #. Default: "CSS class"
-#: ../interfaces.py:101
+#: ../interfaces.py:100
 msgid "collection_tile_css_class"
 msgstr "Classe CSS"
 
 #. Default: "Insert a list of additional css classes for this tile."
-#: ../interfaces.py:104
+#: ../interfaces.py:103
 msgid "collection_tile_css_class_help"
 msgstr "Inserisci una lista di classi CSS aggiuntive per questa tile."
 
 #. Default: "Number of results"
-#: ../interfaces.py:45
+#: ../interfaces.py:44
 msgid "collection_tile_limit"
 msgstr "Numero di risultati"
 
 #. Default: "Renderer"
-#: ../interfaces.py:89
+#: ../interfaces.py:88
 msgid "collection_tile_renderer"
 msgstr "Visualizzazione"
 
 #. Default: "Select one of the available possible layouts for this tile."
-#: ../interfaces.py:92
+#: ../interfaces.py:91
 msgid "collection_tile_renderer_help"
 msgstr "Seleziona una tra le possibili visualizzazioni disponibili per questa tile."
 
 #. Default: "Show dates"
-#: ../interfaces.py:52
+#: ../interfaces.py:51
 msgid "collection_tile_showdates"
 msgstr "Mostra le date"
 
 #. Default: "Tile title"
-#: ../interfaces.py:25
+#: ../interfaces.py:23
 msgid "collection_tile_title"
 msgstr "Titolo della tile"
 
 #. Default: "The title of the tile. Leave blank to not show it."
-#: ../interfaces.py:27
+#: ../interfaces.py:25
 msgid "collection_tile_title_help"
 msgstr "Il titolo della tile. Lascia vuoto per non mostrarlo."
 
-#. Default: "More…"
-#: ../browser/templates/base_view.pt:53
-msgid "more_url"
-msgstr "Altro…"
-
-#. Default: "No results found"
-#: ../browser/templates/base_view.pt:14
-msgid "tiles_collection_noresults"
-msgstr "Nessun risultato trovato"
+#. Default: "Tile not rendered cause there is no content to show."
+#: ../browser/templates/collection_tile.pt:33
+msgid "tiles_collection_nothing_to_show"
+msgstr "Non ci sono elementi da visualizzare."
