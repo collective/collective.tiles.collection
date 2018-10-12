@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.1.1p4 (unreleased)
---------------------
+0.1.0 (unreleased)
+-------------------
 
-- Plone 4 compatibility branch.
+- Plone 4 compatibility branch. From now we use 0.x.x version number.
   [cekk]
 
 1.1 (11/10/2017)
