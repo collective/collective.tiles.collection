@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.1.0 (unreleased)
--------------------
+0.1.0 (2018-10-12)
+------------------
 
 - Plone 4 compatibility branch. From now we use 0.x.x version number.
   [cekk]
