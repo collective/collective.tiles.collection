@@ -32,7 +32,7 @@ class CollectionTile(tiles.PersistentTile):
             return False
         current = api.user.get_current()
         return api.user.has_permission(
-            'Edit',
+            'Modify portal content',
             username=current.id,
             obj=self.context)
 

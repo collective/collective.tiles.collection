@@ -4,7 +4,8 @@ Changelog
 1.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed permission to see empty tile collection message.
+  [eikichi18]
 
 
 1.1.3 (2018-08-21)
