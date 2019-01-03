@@ -5,16 +5,18 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-long_description = '\n\n'.join([
-    open('README.rst').read(),
-    open('CONTRIBUTORS.rst').read(),
-    open('CHANGES.rst').read(),
-])
+long_description = '\n\n'.join(
+    [
+        open('README.rst').read(),
+        open('CONTRIBUTORS.rst').read(),
+        open('CHANGES.rst').read(),
+    ]
+)
 
 
 setup(
     name='collective.tiles.collection',
-    version='1.1.4.dev0',
+    version='1.2.0.dev0',
     description="A tile that shows a set of collection results with a customizable layout",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -54,7 +56,7 @@ setup(
             'plone.testing>=5.0.0',
             'plone.app.contenttypes',
             'plone.app.robotframework[debug]',
-        ],
+        ]
     },
     entry_points="""
     [z3c.autoinclude.plugin]

@@ -1,12 +1,13 @@
 Changelog
 =========
 
-1.1.4 (unreleased)
+1.2.0 (unreleased)
 ------------------
 
 - Fixed permission to see empty tile collection message.
   [eikichi18]
-
+- List of renderers is now sorted by title.
+  [cekk]
 
 1.1.3 (2018-08-21)
 ------------------

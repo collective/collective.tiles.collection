@@ -13,21 +13,12 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 @implementer(IVocabularyFactory)
 class CollectionRenderersVocabulary(object):
-
     def __call__(self, context):
         views = registration.getViews(IBrowserRequest)
         renderers = filter(self.isCollectionRenderer, views)
-        tmp_lst = []
-        unique_list_values = []
+        lst = sorted(map(self.generateTerms, renderers), key=lambda k: k.title)
 
-        lst = map(self.generateTerms, renderers)
-        for item in lst:
-            if item.title not in tmp_lst:
-                tmp_lst.append(item.title)
-                unique_list_values.append(item)
-
-        return SimpleVocabulary(unique_list_values)
-        # return SimpleVocabulary(map(self.generateTerms, renderers))
+        return SimpleVocabulary(lst)
 
     def isCollectionRenderer(self, view):
         """
@@ -45,9 +36,8 @@ class CollectionRenderersVocabulary(object):
         request = getRequest()
         try:
             view = api.content.get_view(
-                context=portal,
-                name=view.name,
-                request=request)
+                context=portal, name=view.name, request=request
+            )
             return view and True or False
         except InvalidParameterError:
             return False
@@ -59,11 +49,8 @@ class CollectionRenderersVocabulary(object):
         factory = view.factory
         name = view.name
         human_name = getattr(factory, 'display_name', name)
-        request = getRequest()
         return SimpleVocabulary.createTerm(
-            name,
-            name,
-            translate(human_name, context=request),
+            name, name, api.portal.translate(human_name)
         )
 
 
