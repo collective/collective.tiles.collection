@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 - Fixed permission to see empty tile collection message.
+- Fixed vocabulary source for schema choice in tile collecton to support pam.
   [eikichi18]
 
 
