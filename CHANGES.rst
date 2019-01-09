@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.0 (unreleased)
+1.2.0 (2019-01-09)
 ------------------
 
 - Fixed permission to see empty tile collection message.
