@@ -9,13 +9,15 @@ from zope.interface import implementer
 from zope.publisher.interfaces.browser import IBrowserRequest
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
+from six.moves import filter
+from six.moves import map
 
 
 @implementer(IVocabularyFactory)
 class CollectionRenderersVocabulary(object):
     def __call__(self, context):
         views = registration.getViews(IBrowserRequest)
-        renderers = filter(self.isCollectionRenderer, views)
+        renderers = list(filter(self.isCollectionRenderer, views))
         lst = sorted(map(self.generateTerms, renderers), key=lambda k: k.title)
 
         return SimpleVocabulary(lst)
