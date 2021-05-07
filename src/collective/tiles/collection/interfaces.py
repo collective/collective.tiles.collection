@@ -31,114 +31,114 @@ class ICollectiveTilesCollectionLayer(IDefaultBrowserLayer):
 
 class ICollectionTileData(model.Schema):
     title = schema.TextLine(
-        title=_('collection_tile_title', u'Tile title'),
+        title=_("collection_tile_title", u"Tile title"),
         description=_(
-            'collection_tile_title_help',
-            u'The title of the tile. Leave blank to not show it.',
+            "collection_tile_title_help",
+            u"The title of the tile. Leave blank to not show it.",
         ),
         required=False,
     )
 
     collection_uid = schema.Choice(
-        title=_('collection_tile_collectionuid', u'Collection'),
+        title=_("collection_tile_collectionuid", u"Collection"),
         description=_(
-            'collection_tile_collectionuid_help', u'Select a collection.'
+            "collection_tile_collectionuid_help", u"Select a collection."
         ),
-        vocabulary='plone.app.vocabularies.Catalog',
+        vocabulary="plone.app.vocabularies.Catalog",
         required=True,
     )
     directives.widget(
-        'collection_uid',
+        "collection_uid",
         RelatedItemsFieldWidget,
-        pattern_options={'selectableTypes': ['Collection']},
+        pattern_options={"selectableTypes": ["Collection"]},
     )
 
     limit = schema.Int(
-        title=_('collection_tile_limit', u'Number of results'), required=False
+        title=_("collection_tile_limit", u"Number of results"), required=False
     )
 
     show_dates = schema.Bool(
-        title=_('collection_tile_showdates', u'Show dates'),
+        title=_("collection_tile_showdates", u"Show dates"),
         required=False,
         default=False,
     )
 
     random = schema.Bool(
-        title=_(u'Select random items'),
+        title=_(u"Select random items"),
         description=_(
-            u'If enabled, items will be selected randomly from the '
-            u'collection, rather than based on its sort order.'
+            u"If enabled, items will be selected randomly from the "
+            u"collection, rather than based on its sort order."
         ),
         required=False,
         default=False,
     )
 
     show_more = schema.Bool(
-        title=_(u'Show more... link'),
+        title=_(u"Show More... link"),
         description=_(
-            u'If enabled, a more... link will appear in the footer '
-            u'of the tile, linking to the underlying '
-            u'Collection.'
+            u'If enabled, a "More..." link will appear '
+            u"in the tile, linking to the underlying "
+            u"Collection."
         ),
         required=False,
         default=True,
     )
 
     show_more_label = schema.TextLine(
-        title=_(u'Show more... label'),
+        title=_(u"Show more... label"),
         description=_(u'This value override default "More..." label.'),
         required=False,
-        default=u'',
+        default=u"",
     )
 
     show_more_collection_uid = schema.Choice(
         title=_(
-            'collection_tile_showmorecollectionuid',
+            "collection_tile_showmorecollectionuid",
             u'Custom "more..." collection',
         ),
         description=_(
-            'collection_tile_showmorecollectionuid_help',
+            "collection_tile_showmorecollectionuid_help",
             u'Select an object in the site, for the "more..." link. '
-            u'If empty, the link will be the collection.',
+            u"If empty, the link will be the collection.",
         ),
-        vocabulary='plone.app.vocabularies.Catalog',
+        vocabulary="plone.app.vocabularies.Catalog",
         required=False,
     )
     directives.widget(
-        'show_more_collection_uid',
+        "show_more_collection_uid",
         RelatedItemsFieldWidget,
         pattern_options={
-            'selectableTypes': ['Collection', 'Folder', 'Document', 'Topic']
+            "selectableTypes": ["Collection", "Folder", "Document", "Topic"]
         },
     )
 
     exclude_context = schema.Bool(
-        title=_(u'Exclude the Current Context'),
+        title=_(u"Exclude the Current Context"),
         description=_(
-            u'If enabled, the listing will not include the current item the '
-            u'tile is rendered for if it otherwise would be.'
+            u"If enabled, the listing will not include the current item the "
+            u"tile is rendered for if it otherwise would be."
         ),
         required=True,
         default=True,
     )
 
     renderer = schema.Choice(
-        title=_('collection_tile_renderer', u'Renderer'),
+        title=_("collection_tile_renderer", u"Renderer"),
         description=_(
-            'collection_tile_renderer_help',
-            u'Select one of the available possible layouts for this tile.',
+            "collection_tile_renderer_help",
+            u"Select one of the available possible layouts for this tile.",
         ),
-        vocabulary='collective.tiles.collection.vocabulary.renderers',
+        vocabulary="collective.tiles.collection.vocabulary.renderers",
         required=True,
-        default='base_tile_collection_renderer',
+        default="base_tile_collection_renderer",
     )
 
     css_class = schema.TextLine(
-        title=_('collection_tile_css_class', u'CSS class'),
+        title=_("collection_tile_css_class", u"CSS class"),
         description=_(
-            'collection_tile_css_class_help',
-            u'Insert a list of additional css classes for this tile.',
+            "collection_tile_css_class_help",
+            u"Insert a list of additional css classes for this tile.",
         ),
         required=False,
-        default=u'',
+        default=u"",
     )

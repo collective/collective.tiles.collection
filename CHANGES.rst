@@ -4,7 +4,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix translations.
+  [cekk]
 
 
 1.2.0 (2019-01-09)
