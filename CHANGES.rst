@@ -4,7 +4,10 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Python3 compatibility.
+  [cekk]
+- Do not use templates registered from unavailable layers.
+  [cekk]
 
 
 1.2.0 (2019-01-09)
