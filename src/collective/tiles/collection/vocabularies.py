@@ -9,13 +9,15 @@ from zope.interface import implementer
 from zope.publisher.interfaces.browser import IBrowserRequest
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
+from six.moves import filter
+from six.moves import map
 
 
 @implementer(IVocabularyFactory)
 class CollectionRenderersVocabulary(object):
     def __call__(self, context):
         views = registration.getViews(IBrowserRequest)
-        renderers = filter(self.isCollectionRenderer, views)
+        renderers = list(filter(self.isCollectionRenderer, views))
         lst = sorted(map(self.generateTerms, renderers), key=lambda k: k.title)
 
         return SimpleVocabulary(lst)
@@ -30,14 +32,18 @@ class CollectionRenderersVocabulary(object):
         """
         if not ICollectionTileRenderer.implementedBy(view.factory):
             return False
-        # try to access this view. If the use can't access the view,
-        # return False
+
         portal = api.portal.get()
         request = getRequest()
+        # check if the view is registered for the current layer
+        for iface in view.required:
+            if not iface.providedBy(request):
+                return False
+
+        # try to access this view. If the use can't access the view,
+        # return False
         try:
-            view = api.content.get_view(
-                context=portal, name=view.name, request=request
-            )
+            view = api.content.get_view(context=portal, name=view.name, request=request)
             return view and True or False
         except InvalidParameterError:
             return False
@@ -48,10 +54,8 @@ class CollectionRenderersVocabulary(object):
         """
         factory = view.factory
         name = view.name
-        human_name = getattr(factory, 'display_name', name)
-        return SimpleVocabulary.createTerm(
-            name, name, api.portal.translate(human_name)
-        )
+        human_name = getattr(factory, "display_name", name)
+        return SimpleVocabulary.createTerm(name, name, api.portal.translate(human_name))
 
 
 CollectionRenderersVocabularyFactory = CollectionRenderersVocabulary()
