@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.2 (unreleased)
+1.3.0 (2021-09-10)
 ------------------
 
 - Python3 compatibility.
