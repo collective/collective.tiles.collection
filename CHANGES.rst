@@ -4,7 +4,8 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Simplified and improved checks for registered renderers.
+  [cekk]
 
 
 1.3.0 (2021-09-10)
