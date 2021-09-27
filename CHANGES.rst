@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3.1 (unreleased)
+1.3.1 (2021-09-27)
 ------------------
 
 - Simplified and improved checks for registered renderers.
