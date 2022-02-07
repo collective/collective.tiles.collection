@@ -4,7 +4,8 @@ Changelog
 1.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Drop includeDependencies="." in order to work with pip
+  [mamico]
 
 
 1.3.1 (2021-09-27)
