@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3.2 (unreleased)
+2.0.0 (2022-09-14)
 ------------------
 
 - Drop includeDependencies="." in order to work with pip
