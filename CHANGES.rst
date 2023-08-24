@@ -4,7 +4,12 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone 6 suport: Refactor Mosaic addon support to use zcml condition instead of using the quickinstaller tool.
+  [fredvd]
+
+- Plone 6 support: Remove unused dependency on plone.formwidget.contenttree
+  [fredvd]
+  
 
 
 2.0.0 (2022-09-14)

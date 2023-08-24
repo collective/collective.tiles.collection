@@ -8,22 +8,13 @@ from zope.interface import implementer
 class HiddenProfiles(object):
 
     def getNonInstallableProfiles(self):
-        """Hide uninstall profile from site-creation and quickinstaller"""
+        """Hide uninstall profile from site-creation and Add'on installation screen"""
         return [
             'collective.tiles.collection:uninstall',
-            'collective.tiles.collection:mosaic_support',
         ]
-
 
 def post_install(context):
     """Post install script"""
-    portal_quickinstaller = api.portal.get_tool('portal_quickinstaller')
-    if not portal_quickinstaller.isProductInstalled('plone.app.mosaic'):
-        # skip if mosaic isn't installed
-        return
-    mosaic_profile = 'collective.tiles.collection:mosaic_support'
-    setup_tool = api.portal.get_tool('portal_setup')
-    setup_tool.runImportStepFromProfile(mosaic_profile, 'plone.app.registry')
 
 
 def uninstall(context):
