@@ -63,6 +63,11 @@ class ICollectionTileData(model.Schema):
         default=False,
     )
 
+    show_description = schema.Bool(
+        title=_("collection_tile_showdescriptions", u"Show descriptions"),
+        required=False,
+        default=False,
+    )
     random = schema.Bool(
         title=_(u"Select random items"),
         description=_(

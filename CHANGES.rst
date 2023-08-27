@@ -4,6 +4,9 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
+- Add 'Show Description' option, default disabled to match rendering in previous versions of the tile.
+  [fredvd]
+
 - Plone 6 suport: Refactor Mosaic addon support to use zcml condition instead of using the quickinstaller tool.
   [fredvd]
 
