@@ -17,14 +17,7 @@
       directory="profiles/default"
       description="Installs the collective.tiles.collection add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:registerProfile
-      name="mosaic_support"
-      title="Collective tiles: collection mosaic support"
-      directory="profiles/mosaic_support"
-      description="Add this tile to mosaic list."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
@@ -33,6 +26,7 @@
       directory="profiles/uninstall"
       description="Uninstalls the collective.tiles.collection add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
       />
 
   <include

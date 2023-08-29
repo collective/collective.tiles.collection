@@ -1,11 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="bda.plone.ldap">
-
-
+    i18n_domain="collective.tiles.collection">
 
   <genericsetup:registerProfile
     name="default"
@@ -13,6 +9,5 @@
     directory="profiles/default"
     description="Register collection tile in Mosaic tiles registry"
     provides="Products.GenericSetup.interfaces.EXTENSION" />
-
 
 </configure>
