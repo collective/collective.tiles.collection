@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from Products.GenericSetup.tool import UNKNOWN
 from zope.interface import implementer
