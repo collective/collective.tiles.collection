@@ -7,7 +7,7 @@ Changelog
 - Add 'Show Description' option, default disabled to match rendering in previous versions of the tile.
   [fredvd]
 
-- Plone 6 suport: Refactor Mosaic addon support to use zcml condition instead of using the quickinstaller tool.
+- Plone 6 support: Refactor Mosaic addon support to use zcml condition instead of using the quickinstaller tool.
   [fredvd]
 
 - Plone 6 support: Remove unused dependency on plone.formwidget.contenttree
