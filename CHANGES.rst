@@ -4,7 +4,15 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add 'Show Description' option, default disabled to match rendering in previous versions of the tile.
+  [fredvd]
+
+- Plone 6 support: Refactor Mosaic addon support to use zcml condition instead of using the quickinstaller tool.
+  [fredvd]
+
+- Plone 6 support: Remove unused dependency on plone.formwidget.contenttree
+  [fredvd]
+  
 
 
 2.0.0 (2022-09-14)

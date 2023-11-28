@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.tiles.collection">
+
+  <genericsetup:registerProfile
+    name="default"
+    title="Add Mosaic support for collection tile"
+    directory="profiles/default"
+    description="Register collection tile in Mosaic tiles registry"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+</configure>

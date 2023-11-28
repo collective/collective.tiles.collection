@@ -1,31 +1,38 @@
 # -*- coding: utf-8 -*-
-from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
+from Products.GenericSetup.tool import UNKNOWN
 from zope.interface import implementer
 
 
 @implementer(INonInstallable)
 class HiddenProfiles(object):
 
+    def getNonInstallableProducts(self):
+        return [
+            "collective.tiles.collection.mosaicsupport",
+        ]
+
     def getNonInstallableProfiles(self):
-        """Hide uninstall profile from site-creation and quickinstaller"""
+        """Hide uninstall profile from site-creation and Add'on installation screen"""
         return [
             'collective.tiles.collection:uninstall',
-            'collective.tiles.collection:mosaic_support',
         ]
 
 
 def post_install(context):
     """Post install script"""
-    portal_quickinstaller = api.portal.get_tool('portal_quickinstaller')
-    if not portal_quickinstaller.isProductInstalled('plone.app.mosaic'):
-        # skip if mosaic isn't installed
+    # Note: context is the portal_setup tool.
+    if context.getLastVersionForProfile('plone.app.mosaic:default') == UNKNOWN:
         return
-    mosaic_profile = 'collective.tiles.collection:mosaic_support'
-    setup_tool = api.portal.get_tool('portal_setup')
-    setup_tool.runImportStepFromProfile(mosaic_profile, 'plone.app.registry')
+    context.runAllImportStepsFromProfile(
+        'collective.tiles.collection.mosaicsupport:default'
+    )
 
 
 def uninstall(context):
     """Uninstall script"""
-    # Do something at the end of the uninstallation of this package.
+    # Mark our optional mosaicsupport module as uninstalled.
+    # Works fine, even when it was not installed, or is not available.
+    context.unsetLastVersionForProfile(
+        'collective.tiles.collection.mosaicsupport:default'
+    )

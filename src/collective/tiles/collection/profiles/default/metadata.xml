@@ -3,6 +3,5 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-plone.app.tiles:default</dependency>
-    <dependency>profile-plone.formwidget.contenttree:default</dependency>
   </dependencies>
 </metadata>
