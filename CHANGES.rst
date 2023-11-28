@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1 (unreleased)
+2.1.0 (2023-11-28)
 ------------------
 
 - Add 'Show Description' option, default disabled to match rendering in previous versions of the tile.
