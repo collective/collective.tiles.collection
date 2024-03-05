@@ -4,7 +4,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Avoid error when getting collection by UID.
+  [daniele]
 
 
 2.1.0 (2023-11-28)
