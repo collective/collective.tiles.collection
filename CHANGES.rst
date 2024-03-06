@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.1.1 (unreleased)
+2.1.1 (2024-03-06)
 ------------------
 
 - Avoid error when getting collection by UID.
