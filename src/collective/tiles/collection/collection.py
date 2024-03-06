@@ -17,7 +17,10 @@ class CollectionTile(tiles.PersistentTile):
         collection_uid = self.data.get('collection_uid')
         if not collection_uid:
             return None
-        return api.content.get(UID=collection_uid)
+        try:
+            return api.content.get(UID=collection_uid)
+        except:
+            return None
 
     @property
     @view.memoize
