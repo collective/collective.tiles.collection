@@ -4,7 +4,13 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Security fix: validate the ``renderer`` tile data value against registered
+  ``ICollectionTileRenderer`` adapters before use in ``collection_tile.pt``.
+  Previously, an unauthenticated ``request.form`` parameter could bypass
+  ``schema.Choice`` vocabulary validation and inject TALES metacharacters into
+  the ``python:path()`` call in the trusted template engine, enabling RCE for
+  users with editor-level permissions.
+  [mauro]
 
 
 2.1.1 (2024-03-06)
