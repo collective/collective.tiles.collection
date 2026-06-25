@@ -16,7 +16,7 @@
       <div tal:attributes="class string:collectionTile ${view/data/css_class};
                            data-tileid tile_id"
            tal:condition="results">
-         <tal:newhere define="template_id view/data/renderer|string:base_tile_collection_renderer;
+         <tal:newhere define="template_id view/renderer;
                               callable_path string:context/$template_id/macros/collection-tile-macro;">
            <tal:subview metal:use-macro="python:path(callable_path)">
              Subview

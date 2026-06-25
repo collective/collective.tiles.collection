@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
+from collective.tiles.collection.interfaces import ICollectionTileRenderer
 from plone import api
 from plone import tiles
 from plone.memoize import view
+from zope.component import getSiteManager
+from zope.interface import Interface
+from zope.interface import providedBy
 
 import random
 
@@ -10,6 +14,28 @@ class CollectionTile(tiles.PersistentTile):
     """
     A tile that show collection results
     """
+
+    @property
+    def renderer(self):
+        """Return a validated renderer name.
+
+        Validates against the registered ICollectionTileRenderer adapters so
+        that a raw request.form value cannot inject TALES metacharacters into
+        the trusted-engine python:path() call in collection_tile.pt.
+        """
+        name = self.data.get('renderer', 'base_tile_collection_renderer')
+        if not name:
+            return 'base_tile_collection_renderer'
+        sm = getSiteManager()
+        factory = sm.adapters.lookup(
+            required=(providedBy(self.context), providedBy(self.request)),
+            provided=Interface,
+            name=name,
+            default=None,
+        )
+        if factory is not None and ICollectionTileRenderer.implementedBy(factory):
+            return name
+        return 'base_tile_collection_renderer'
 
     @property
     @view.memoize
